@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html class="js no-touch">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="HandheldFriendly" content="True">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="description" content="Design Tamplate">
+<meta name="csrf-token">
+<meta name="author" content="Honglio">
+
+<title>Supplier Portal Profile Preferences</title>
+<link rel="stylesheet" href="css/lib/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="css/lib/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="css/lib/flat-ui.css" type="text/css">
+<link rel="stylesheet" href="css/lib/material.css">
+<link rel="stylesheet" href="css/lib/ripples.css">
+<link rel="stylesheet" href="css/base.css" type="text/css">
+<link rel="stylesheet" href="css/style-green.css" type="text/css">
+<link rel="alternate stylesheet" type="text/css" href="css/style-blue.css" title="blue" media="all">
+<link rel="alternate stylesheet" type="text/css" href="css/style-black.css" title="black" media="all">
+<link rel="alternate stylesheet" type="text/css" href="css/style-cyan.css" title="cyan" media="all">
+<link rel="alternate stylesheet" type="text/css" href="css/style-green.css" title="green" media="all">
+<link rel="alternate stylesheet" type="text/css" href="css/style-orange.css" title="orange" media="all">
+<link rel="alternate stylesheet" type="text/css" href="css/style-pink.css" title="pink" media="all">
+<link rel="alternate stylesheet" type="text/css" href="css/style-purple.css" title="purple" media="all">
+<link rel="alternate stylesheet" type="text/css" href="css/style-red.css" title="red" media="all">
+
+<!--<link rel="stylesheet" href="css/style.css" type="text/css">
+<link rel="stylesheet" href="css/materialize.min.css" type="text/css">-->
+<link rel="stylesheet" href="css/materialize.css" type="text/css">
+<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+<!-- Slider -->
+<link rel="stylesheet" href="rs-plugin/css/settings.css" type="text/css">
+<link rel="stylesheet" href="showbizpro/css/settings.css" type="text/css" media="screen">
+<!--[if lt IE 9]>
+<script src="js/vendors/html5shiv.js"></script>
+<![endif]-->
+<!--[if lt IE 10]>
+<script src="js/vendors/jquery.placeholder.js"></script>
+<![endif]-->
+<!-- JS -->
+<script type="text/javascript" src="js/vendors/modernizr.custom.js"></script>
+<script type="text/javascript" src="js/vendors/toucheffects.js"></script>
+<script type="text/javascript" src="js/vendors/jquery.js"></script>
+<script type="text/javascript" src="js/vendors/jquery-ui-1.10.3.custom.min.js"></script>
+<script type="text/javascript" src="js/vendors/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="js/vendors/bootstrap.js"></script>
+<script type="text/javascript" src="js/vendors/material.js"></script>
+<script type="text/javascript" src="js/vendors/ripples.js"></script>
+<script type="text/javascript" src="js/vendors/less-1.7.5.min.js"></script>
+
+<style>
+.center {
+   
+    margin-top: 200px;
+    margin-right: 100px;
+    margin-left: 100px;
+ 
+}
+
+p,li{
+ color:grey;
+}
+li {
+    padding-left: 500pt;
+}
+</style>
+
+</head>
+
+<body style="background-color:rgb(244,244,244);">
+
+<header>
+		<section id="top-nav" style="z-index:100" class="navbar-wrapper">
+			<div class="container">
+				<div class="navwrapper">
+					<nav role="navigation" class="navbar navbar-fixed-top navbar-inverse">
+						<div class="container">
+							<div class="navbar-header">
+							    <a href="https://supplier-portal.herokuapp.com">
+								<button type="button" data-toggle="collapse" data-target="#navbar-collapse" class="navbar-toggle collapsed">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+								<span class="navbar-brand" style="padding-top:25px;">SUPPLIER PORTAL </span>
+								</a>
+							</div>
+							<div id="navbar-collapse" class="collapse navbar-collapse">
+								
+								<div>
+								<span class="navbar-brand" href="#" style="float:right;padding-top:25px ; color:black;">Cognizant</span><img style="float:right;padding:10px 5px 15px 20px;" src="img/theme/cognizant-logo.png">
+							</div>	
+							</div>						
+						</div>
+					</nav>
+				</div>
+			</div>
+		</section>
+	</header>
+
+<main>
+		
+              <div style="background-color:#e4e6e8;">
+	          <br><br>
+              </div>			
+
+	          <table class="simpletable" width="100%" cellpadding="0" cellspacing="0">   
+              <tr>
+              <td width="100%" colspan="4"><table class="simpletable" width="100%" cellpadding="0" cellspacing="0">   
+              <tr>
+              <td><table class="simpletable" width="100%" border="0" cellspacing="0" cellpadding="6px">
+			  <h3 align="center">Profile Preferences</h3><br><br><br><br>
+              </tr>
+		<!--	  <p style="float: left; clear: left;  padding-left:100pt;"><img src="img/PO.png" style="border:10px outset silver;"></p>
+			  
+              <h3 class="left" style="padding-left:215pt;">Purchase Order:</h3>
+			  
+<br><br><br><br>
+            
+			 
+             <p style="padding-left:500pt;">Purchse order is the one of the feature of supplier portal which is used to make
+			 <br> 
+			 order by customers.it demonstrates the details of order status
+			 <br>
+			 Following are the functionality of purchase order:
+		     </p>
+			 <li >View Purchase Orders </li> 
+			 <li>Create Packing Lists</li>
+			 <li>End to End PO amendment process</li>
+			 <li>Acknowledge Purchase Orders</li>
+			 <li>View document flow</li>
+			 <li>Shipping and delivery dates estimation </li>
+			
+<br><br><br><br><br><br><br><br>
+
+			<p style="float: right; clear: right;padding-right:100pt;"></style><img src="img/pack1.jpg" style="border:10px outset silver;">
+			<div class="area">
+            <h3 style="padding-left:98pt;">Packing List:</h3>
+            <p style="padding-left:100pt;">Packing list of supplier portal demonstrates the status of packing list whether
+            <br>		
+ 			it is ready to ship or shipped.
+			<br>
+			Following are the functionality of packing list:
+			<br>
+            </p>
+            <li style="padding-left:100pt;">Packing Lists View for Customers</li>
+            <li style="padding-left:100pt;">Packing Lists View for Suppliers</li>
+            <li style="padding-left:100pt;">Create Packing Lists</li> 
+            </div>
+            </div>
+            </div>
+			
+<br><br><br><br><br><br><br><br>
+
+			<p style="float: left; clear: left;  padding-left:100pt;"><img src="img/item2.jpg" style="border:10px outset silver;">
+			<h3 class="left" style="padding-left:195pt;">Item Receipts:</h3>
+     
+<br><br><br><br>
+            
+			<p style="padding-left:500pt;">Basically item receipts is used to get the receipts of item.
+			<br>	
+            Following are the functionality of item receipts:
+			</p>
+			
+			<li>It is used to view item receipts</li>
+			
+
+<br><br><br><br><br><br><br><br>
+
+            <p style="float: right; clear: right;padding-right:100pt;"><img src="img/Bills.png" style="border:10px outset silver;">
+			
+            <h3 style="padding-left:100pt;">  Bills:</h3>
+            <p style="padding-left:100pt;">This feature provides billing platform.it has many functionality.
+            <br>
+			Following are the functionality of packing list:
+			</p>
+			 
+            <li style="padding-left:100pt;">View Bills </li>
+			<li style="padding-left:100pt;">View Payments </li>
+			<li style="padding-left:100pt;">Upload bills</li>
+
+<br><br><br><br><br><br><br><br>
+			
+			<p style="float: left; clear: left; padding-left:100pt;"><img src="img/supplier.jpg" style="border:10px outset silver;">
+			<div class="area">
+            <h3 class="left" style="padding-left:195pt;">Supplier:</h3>
+    
+<br><br><br><br>
+            
+            <p style="padding-left:505pt;">This is another feature of supplier portal.which is used to manage the services.
+			<br>
+            
+			Following are the functionality of packing list:</p>
+		    <li>New supplier registration self service</li>
+            <li>Manage preferences for suppliers</li>
+            <li>Analyze suppliers by multiple metrics</li>
+            <li>Block suppliers</li>
+
+<br><br><br><br><br><br><br><br>
+
+			<p style="float: right; clear: right;padding-right:100pt;"></style><img src="img/access2.png" style="border:10px outset silver;">
+			<div class="area">
+            <h3 style="padding-left:100pt;">Access:</h3>
+            <p style="padding-left:100pt;">Supplier portal is very easy to access.it is user flexible it can be
+			<br>
+			use in desktop,mobile,tablets etc
+		    <br>
+            Following are the functionality of packing list:
+			</p>
+            <li style="padding-left:100pt;">Mobile Responsive pages</li>
+            <li style="padding-left:100pt;">Multiple cloud provider support</li>
+			
+			<br><br><br><br><br><br><br><br>    -->
+			
+			<p style="float: left; clear: left; padding-left:100pt;"><img src="img/method.jpg" style="border:10px outset silver;">
+			<div class="area">
+            <h3 class="left" style="padding-left:195pt;">Delivery Modes:</h3>
+    
+<br><br><br>
+            
+            <p style="padding-left:500pt;">
+<br>
+Suppliers can have their own preferred delivery modes from the following to deliver the products.
+<br>
+            The delivery modes are:
+            </p>
+            <li>Air</li>
+            <li>Rail</li>
+            <li>Ship</li>
+            <li>Road</li>
+			
+			
+			<br><br><br><br><br><br><br><br>
+
+			<p style="float: right; clear: right;padding-right:100pt;"></style><img src="img/deliverytym.jpg" style="border:10px outset silver;">
+			<div class="area">
+            <h3 style="padding-left:100pt;">Delivery Time:</h3>
+            <p style="padding-left:100pt;">Suppliers can provide an expected time of delivery as per their Ex Factory Date and Warehouse Arrival Date.
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			
+			<p style="float: left; clear: left; padding-left:100pt;"><img src="img/shipment.jpg" style="border:10px outset silver;">
+			<div class="area">
+            <h3 class="left" style="padding-left:195pt;">Shipping Information:</h3>
+    
+<br><br><br><br>
+            
+            <p style="padding-left:505pt;">Supplier Portal enables you to view your existing shipments and other shipment information such as delivery schedules.
+
+<br><br><br><br><br><br><br><br><br><br>
+	    
+	    <p style="float: right; clear: right;padding-right:100pt;"></style><img src="img/benefit.jpg" style="border:10px outset silver;">
+	    <div class="area">
+            <h3 style="padding-left:100pt;">Benefits:</h3>
+<br>
+	   
+	    <li style="padding-left:100pt;">Supplier Portal provides real time visibility of purchase order,item receipts, bills 
+            and payments to suppliers</li>
+	    <li style="padding-left:100pt;">Supplier Portal has ability to better manage delivery and shipping times</li>
+            <li style="padding-left:100pt;">It manages multiple preferences by supplier as a self service</li>
+	    <li style="padding-left:100pt;">Supplier Portal Analyze suppliers by multiple metrics such as shipping, payment, quality</li>
+            <li style="padding-left:100pt;">It has ability to create packing lists by suppliers and providing visibility of packing list to customers</li>
+<br><br><br><br><br><br><br><br>
+           <p style="float: left; clear: left; padding-left:100pt;"><img src="img/ack.jpg" style="border:10px outset silver;">
+	   <div class="area">
+           <h3 class="left" style="padding-left:195pt;">Order Acknowledgement:</h3>
+    
+<br><br><br><br>
+            
+            <p style="padding-left:505pt;">Order Acknowledgement is a 
+	     process where the suppliers are asked to electronically confirm that they have received the purchase order.The Supplier Portal assures that the supplier has received the order.
+	<br><br><br><br><br><br><br><br><br><br>
+	
+     	   <div align="center">
+	   <a style="color:white;" class="red darken-1 btn btn-primary btn-sm"href="http://supplier-portal.herokuapp.com/">Back</a></div>
+           <a href="javascript:void(0);" id="scroll" title="Scroll to Top" style="display: none;">Top<span></span></a>
+</main>
+<script>
+$(document).ready(function(){
+$('input').blur(function(){
+if($(this).val())
+$(this).addClass('used');
+else
+$(this).removeClass('used');
+});
+                   
+});
+</script>
+
+<script type="text/javascript" src="js/vendors/jquery.slimscroll.min.js"></script><script type="text/javascript" src="js/vendors/jquery.scrollUp.js"></script><script type="text/javascript" src="js/vendors/jquery.stickup.min.js"></script><script type="text/javascript" src="js/application.js"></script><script type="text/javascript">//enabling stickUp on the '.navbar-wrapper' class
+
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top - 45
+        }, 1000);
+        return false;
+      }
+    }
+  });
+
+
+
+
+
+
+
+</body>
+</html>

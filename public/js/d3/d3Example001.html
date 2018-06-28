@@ -1,0 +1,477 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Document Flow</title>
+	<style type="text/css">
+
+	div.divtree {
+	float: left;
+	height: auto;
+	width: 100%;
+	}
+	
+	div.tooltip {
+	position: absolute;
+//	text-align: left;
+	z-index: 10;
+//	width: auto;
+//	height: auto;
+//	padding: 8px;
+//	font: 12px sans-serif;
+//	background: #009999;
+//	color: white;
+//	border: solid 1px #aaa;
+	//border-radius: 8px;
+//	        opacity: 0;
+	}
+
+        div.navdiv {
+	position: absolute;
+	//text-align: left;
+	z-index: 10;
+	width: auto;
+	height: auto;
+	//padding: 8px;
+	//font: 8px sans-serif;
+	//background: #009999;
+	//color: white;
+	//border: solid 1px #aaa;
+	//border-radius: 8px;
+	}
+
+	div.payment{
+	z-index: 10;
+	width: 5px;
+	height: 5px;
+	padding: 4px;
+	background: tomato;
+	border: solid 1px #aaa;
+	border-radius: 2px;
+	}
+	div.invoice{
+	z-index: 10;
+	width: 5px;
+	height: 5px;
+	padding: 4px;
+	background: black;
+	border: solid 1px #aaa;
+	border-radius: 2px;
+	}
+	div.assemblybuild{
+	z-index: 10;
+	width: 5px;
+	height: 5px;
+	padding: 4px;
+	background: mediumblue;
+	border: solid 1px #aaa;
+	border-radius: 2px;
+	}
+	div.workorder{
+	z-index: 10;
+	width: 5px;
+	height: 5px;
+	padding: 4px;
+	background: darkgreen;
+	border: solid 1px #aaa;
+	border-radius: 2px;
+	}
+	div.salesorder{
+	z-index: 10;
+	width: 5px;
+	height: 5px;
+	padding: 4px;
+	background: teal;
+	border: solid 1px #aaa;
+	border-radius: 2px;
+	}
+	div.estimate{
+	z-index: 10;
+	width: 5px;
+	height: 5px;
+	padding: 4px;
+	background: olive;
+	border: solid 1px #aaa;
+	border-radius: 2px;
+	}
+	div.opportunity{
+	z-index: 10;
+	width: 5px;
+	height: 5px;
+	padding: 4px;
+	background: darkslateblue;
+	border: solid 1px #aaa;
+	border-radius: 2px;
+	}
+	div.itemshipment{
+	z-index: 10;
+	width: 5px;
+	height: 5px;
+	padding: 4px;
+	background: saddlebrown;
+	border: solid 1px #aaa;
+	border-radius: 2px;
+	}
+	div.customer{
+	z-index: 10;
+	width: 5px;
+	height: 5px;
+	padding: 4px;
+	background: mediumseagreen;
+	border: solid 1px #aaa;
+	border-radius: 2px;
+	}
+	div.cashrefund{
+	z-index: 10;
+	width: 5px;
+	height: 5px;
+	padding: 4px;
+	background: indigo;
+	border: solid 1px #aaa;
+	border-radius: 2px;
+	}
+	div.itemreceipt{
+	z-index: 10;
+	width: 5px;
+	height: 5px;
+	padding: 4px;
+	background: darkorange;
+	border: solid 1px #aaa;
+	border-radius: 2px;
+	}
+	div.returnauthorization{
+	z-index: 10;
+	width: 5px;
+	height: 5px;
+	padding: 4px;
+	background: deeppink;
+	border: solid 1px #aaa;
+	border-radius: 2px;
+	}
+	div.billpayment{
+	z-index: 10;
+	width: 5px;
+	height: 5px;
+	padding: 4px;
+	background: lime;
+	border: solid 1px #aaa;
+	border-radius: 2px;
+	}
+	div.bill{
+	z-index: 10;
+	width: 5px;
+	height: 5px;
+	padding: 4px;
+	background: dimgray;
+	border: solid 1px #aaa;
+	border-radius: 2px;
+	}
+	div.purchaseorder{
+	z-index: 10;
+	width: 5px;
+	height: 5px;
+	padding: 4px;
+	background: orangered;
+	border: solid 1px #aaa;
+	border-radius: 2px;
+	}
+	div.cashsale{
+	z-index: 10;
+	width: 5px;
+	height: 5px;
+	padding: 4px;
+	background: magenta;
+	border: solid 1px #aaa;
+	border-radius: 2px;
+	}
+        div.currencyrevaluation{
+	z-index: 10;
+	width: 5px;
+	height: 5px;
+	padding: 4px;
+	background: crimson;
+	border: solid 1px #aaa;
+	border-radius: 2px;
+	}
+/*
+	div.nodecolorchart{
+	position: absolute;
+	text-align: left;
+	z-index: 10;
+	width: auto;
+	height: auto;
+	top: 155px;
+	left: 3px;
+	padding: 8px;
+	font: 8px sans-serif;
+	background: #848482;
+	color: white;
+	border: solid 1px #aaa;
+	border-radius: 25px;
+	visibility : "hidden";
+	// opacity: 0.8;
+	}
+*/	
+	table.divtitle{
+	position: absolute;
+	text-align: left;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	padding: 8px;
+	background: #848482;
+	color: black;
+	border: solid 1px #aaa;
+	border-radius: 25px;
+	opacity: 0.8;
+	}
+
+	table.colortable{
+	//font: 10px sans-serif;
+	}
+
+	div.arrowimg {
+		float: left;
+		height: auto;
+		width: 28px;
+		margin-top: 10px;
+        }
+        div.popupbox1 {
+	background-color: #FFF;
+	float: left;
+	height: auto;
+	width: 219px;
+	border-radius: 5px;
+	box-shadow: 10px 9px 0px 0px #bebebe;
+	}
+	div.popupheader1 {
+		height: auto;
+		width: 215px;
+		background-color: #00B9B8;
+		float: left;
+		margin: 2px;
+		border-radius: 5px 5px 0px 0px;
+	}
+	div.popupbox {
+	background-color: #FFF;
+	float: left;
+	height: auto;
+	width: 70px;
+	border-radius: 5px;
+	box-shadow: 10px 9px 0px 0px #bebebe;
+	}
+	div.popupheader {
+		height: auto;
+		width: 66px;
+		background-color: #00B9B8;
+		float: left;
+		margin: 2px;
+		border-radius: 5px 5px 0px 0px;
+	}
+	div.headericon {
+		float: left;
+		height: auto;
+		width: 22px;
+		padding-left: 13px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+	div.headertext {
+		height: auto;
+		min-width: 100px;
+		font-size: 18px;
+		color: #FFF;
+		float: left;
+		padding: 4px 10px;
+	}
+	div.popupcontent {
+		float: left;
+		height: auto;
+		width: 200px;
+        font: 10px Arial;
+        	margin-left: 12px;
+	//	text-align: center;
+		padding: 5px;
+	}
+      
+	.node{
+	cursor:pointer;
+	}
+
+	.overlay {
+	background-color: #EEE;
+	float: left;
+	height: 410px;
+	width: 800px;
+	position: absolute;
+	top: 200px;
+	left: 400px
+      //  opacity: 0.8;
+	}
+
+ 	.node circle{
+	fill:#fff;
+	stroke:steelblue;
+	stroke-width:1.5px;
+	}
+
+	.node text{
+	font-size:10px;
+	font-family:sans-serif;
+	//fill:#00B9B8;
+	}
+
+	.link{
+	fill:none;
+	stroke:#ccc;
+	stroke-width:1.5px;
+	}
+
+	.templink{
+	fill:none;
+	stroke:red;
+	stroke-width:3px;
+	}
+
+	.ghostCircle.show{
+	display:block;
+	}
+
+	.ghostCircle, .activeDrag .ghostCircle{
+	display:none;
+	}
+
+	.h1{
+	text-align:center;
+	}
+
+
+
+	path {
+	stroke-width: 1.5px;
+	}
+
+	.small {
+	fill: steelblue;
+	}
+
+	.big {
+	stroke: #666;
+	fill: #ddd;
+	}
+
+	.small:hover {
+	stroke: steelblue;
+	fill: lightsteelblue;
+	}
+
+	</style>
+       
+        <script src="C:/Users/464408/Desktop/d3/jquery-1.4.3.min.js"></script>
+        <script src="C:/Users/464408/Desktop/d3/d3.v3.min.js"></script>
+	
+
+
+
+      
+        <link rel="stylesheet" href="C:/Users/464408/Desktop/d3/style.css" type="text/css" media="screen" />
+	
+	</head>
+
+	<body>
+
+	<div id="outerdiv">
+		<div class="topborder"></div>
+		<div id="headerdiv">
+		
+			<div id="headerinner">
+
+				<div id="headercontent">
+					
+                                        <div class="logo"><img src="https://system.na1.netsuite.com/c.TSTDRV1174726/suitebundle37771/Document%20Flow/img/Header-documentFlow.gif" width="205" height="79" alt="" /></div>
+					<div class="titleheadertext">Test</div>
+					
+                                        <div class="cognizantlogo"><img src="https://system.na1.netsuite.com/c.TSTDRV1174726/suitebundle37771/Document%20Flow/img/cognizant-logo.png" width="173" height="55" alt="" /></div>
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		<div class="topborder" style="height:12px;"></div>
+		
+		<div id="contentdiv">
+		
+			<div id="headerinner">
+				
+				<div id="contentitem">
+	
+					<div class="colorchart">
+						<h2>Color Chart</h2>
+							<table class=colortable><tr><td>Customer</td><td><div class=customer></div></td></tr> <tr><td>Opportunity</td><td><div class=opportunity></div></td></tr> <tr><td>Estimate</td><td><div class=estimate></div></td></tr> <tr><td>Sales Order</td><td><div class=salesorder></div></td></tr>  <tr><td>Item Shipment</td><td><div class=itemshipment></div></td></tr> <tr><td>Invoice</td><td><div class=invoice></div></td></tr> <tr><td>Payment</td><td><div class=payment></div></td></tr> <tr><td>Cash Sale</td><td><div class=cashsale></div></td></tr> <tr><td>Purchase Order</td><td><div class=purchaseorder></div></td></tr>  <tr><td>Item Receipt</td><td><div class=itemreceipt></div></td></tr> <tr><td>Bill</td><td><div class=bill></div></td></tr> <tr><td>Bill Payment</td><td><div class=billpayment></div></td></tr> <tr><td>Cash Refund</td><td><div class=cashrefund></div></td></tr> <tr><td>Return Authorization</td><td><div class=returnauthorization></div></td></tr> <tr><td>Assembly Build</td><td><div class=assemblybuild></div></td></tr> <tr><td>Work Order</td><td><div class=workorder></div></td></tr><tr><td>Currency Revaluation</td><td><div class=currencyrevaluation></div></td></tr></table>
+
+					</div>
+					
+					<div class="contenttextdiv">
+						<ul>
+							
+							<li>Place the cursor on the node for detailed view.</li>
+							<li>Right click on the node to view that Transaction.</li>
+							<li>Click on the parent node circle to expand/collapse the child nodes.</li>
+							<li>Double click / Scroll up to Zoom In. Shift + Double click / Scroll down to Zoom Out.</li>
+						</ul>
+					</div>
+				
+				</div>
+			</div>
+	
+			<div id="div-tree" class="divtree">
+			
+				<script>var NSDocFlowJSON ={"name":"customer","assigned":"1 Renault","href":"/app/common/entity/custjob.nl?id=1264",
+"children":[{"name":"Order","assigned":"Order::2178","href":"/app/accounting/transactions/salesord.nl?id=1551","date":"3/24/2014 3:56 am","status":"fullyBilled",
+		"children":[
+		{"name":"Item Fulfillment","assigned":"Item Fulfillment::52","href":"/app/accounting/transactions/itemship.nl?id=1552","date":"3/24/2014 3:56 am","status":"shipped","children":[]},
+		{"name":"Invoice","assigned":"Invoice::0213","href":"/app/accounting/transactions/custinvc.nl?id=1553","date":"3/24/2014 3:56 am","status":"open","children":[]},
+		{"name":"Invoice","assigned":"Invoice::0213","href":"/app/accounting/transactions/custinvc.nl?id=1553","date":"3/24/2014 3:56 am","status":"open","children":[]},
+		{"name":"Invoice","assigned":"Invoice::0213","href":"/app/accounting/transactions/custinvc.nl?id=1553","date":"3/24/2014 3:56 am","status":"open","children":[]}
+		]
+	},
+	{"name":"Order","assigned":"Order::2179","href":"/app/accounting/transactions/salesord.nl?id=1551","date":"3/24/2014 3:56 am","status":"fullyBilled",
+		"children":[
+		{"name":"Item Fulfillment","assigned":"Item Fulfillment::52","href":"/app/accounting/transactions/itemship.nl?id=1552","date":"3/24/2014 3:56 am","status":"shipped","children":[]},
+		{"name":"Invoice","assigned":"Invoice::0213","href":"/app/accounting/transactions/custinvc.nl?id=1553","date":"3/24/2014 3:56 am","status":"open","children":[]},
+		{"name":"Invoice","assigned":"Invoice::0213","href":"/app/accounting/transactions/custinvc.nl?id=1553","date":"3/24/2014 3:56 am","status":"open","children":[]},
+		{"name":"Invoice","assigned":"Invoice::0213","href":"/app/accounting/transactions/custinvc.nl?id=1553","date":"3/24/2014 3:56 am","status":"open","children":[]}
+		]
+	}
+	]
+	}; </script>
+	
+				<script>var NSTranId ="'"; </script>
+
+<script src="C:/Users/464408/Desktop/d3/d3.shapes.js"></script>
+<script src="C:/Users/464408/Desktop/d3/modernizr.js"></script>
+<script src="C:/Users/464408/Desktop/d3/prefixfree.min.js"></script>
+<script src="C:/Users/464408/Desktop/d3/index.js"></script>
+	
+				
+	
+			</div>
+				
+	<div id="footerdiv">
+	<div id="headerinner">
+	<div id="footercontent">
+	<p>&copy; Copyright 2014, Cognizant</p>
+	</div>
+
+	</div>
+	</div>
+
+	</div>
+
+	</div>
+
+	</body>
+	</html>
+		
+	

@@ -1,0 +1,264 @@
+.drop ul {
+  position: absolute;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+}
+.drop ul li {
+  display: block;
+  width: 100%;
+}
+.drop ul li a {
+  width: 100%;
+  display: inline-block;
+  white-space: pre;
+  box-sizing: border-box;
+  font-size:0.8em;
+}
+
+.drop li {
+  font-size:0.9em;
+}
+
+.drop:hover ul {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.card-1 {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  margin: 3rem 3rem 3rem 3rem;}
+  
+  .card-1 {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);}
+  
+  .card-3 {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  margin:1rem 1rem 1rem 1rem;
+  }
+  
+  .card-4 {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  
+  }
+  
+#advert3
+{
+  margin: 0rem 0rem 4rem 0rem;
+ }
+
+form { padding: 2.5em; }
+
+.group{ position: relative; margin-bottom: 2.4em;}
+
+label{
+color: #d2d2d2;
+font-size: 0.5em;
+font-weight: normal;
+font-family: sans-serif;
+position: absolute;
+pointer-events: none;
+top: 10px;
+transition: 0.2s ease all;
+}
+
+input{
+color: #909090;
+font-size: 15px;
+padding: 10px 0px 10px 0px;
+display: block;
+outline: none;
+border: none;
+width: 300px;
+border-bottom: 30px solid #d2d2d2;
+}
+
+
+
+
+.bar {
+position: relative; display: block; width: 300px;}
+
+.bar:before, .bar:after{
+content: "";
+height: 2px;
+width: 0;
+bottom: -1px;
+position: absolute;
+background: #B388FF;
+transition: 0.2s ease all;
+}
+.bar:before{left: 50%;}
+.bar:after{right: 50%;}
+
+
+
+input:valid { border-bottom: 1px solid #4fc24f;}
+
+input-valid ~ .bar:before,
+input-valid ~ .bar:after {
+background-color: #4fc24f !important;
+}
+
+input:focus ~ label,
+input.used ~ label {
+top: -20px;
+font-size: 13px;
+color: #B388FF;
+}
+
+input:valid ~ label,
+input:valid.used ~label {
+color: #4fc24f;
+}
+
+input:focus ~ .bar:before,
+input:focus ~ .bar:after{
+width: 50%;
+}
+
+
+
+.card-2 {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  width:280px;
+  height:300px;}
+  
+  .demo {
+  width: 300px;
+  padding: 20px;
+  margin: 0 auto;
+  top: 50%;
+  margin-top: -2em;
+  position: absolute;
+  right: 0;
+  left: 0;
+  overflow:hidden;
+ 
+}
+
+.card-1 {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);}
+  .demo {
+  width: 200px;
+  padding: 20px;
+  margin: 0 auto;
+  top: 50%;
+  margin-top: -2em;
+  position: absolute;
+  right: 0;
+  left: 0;
+  overflow:hidden;
+ 
+}
+.mdl-selectfield label {display: none;}
+/* Use custom arrow */
+.mdl-selectfield select {appearance: none}
+.mdl-selectfield {
+  font-family: 'Roboto','Helvetica','Arial',sans-serif;
+  position: relative;
+    &:after {
+        position: absolute;
+        top: 0.75em;
+        right: 0.5em;
+        /* Styling the down arrow */
+        width: 0;
+        height: 0;
+        padding: 0;
+        content: '';
+        border-left: .25em solid transparent;
+        border-right: .25em solid transparent;
+        border-top: .375em solid $select-border-color;
+        pointer-events: none;
+    }
+}
+#noti_Container {
+        position:relative;
+    }
+       
+    /* A CIRCLE LIKE BUTTON IN THE TOP MENU. */
+    #noti_Button {
+        width:22px;
+        height:22px;
+        line-height:22px;
+        border-radius:50%;
+        -moz-border-radius:50%; 
+        -webkit-border-radius:50%;
+        background:blue;
+        margin:-3px 10px 0 10px;
+        cursor:pointer;
+    }
+        
+    /* THE POPULAR RED NOTIFICATIONS COUNTER. */
+    #noti_Counter {
+        display:block;
+        position:absolute;
+        background:#E1141E;
+        color:#FFF;
+        font-size:12px;
+        font-weight:normal;
+        padding:1px 3px;
+        margin:-8px 0 0 25px;
+        border-radius:2px;
+        -moz-border-radius:2px; 
+        -webkit-border-radius:2px;
+        z-index:1;
+    }
+        
+    /* THE NOTIFICAIONS WINDOW. THIS REMAINS HIDDEN WHEN THE PAGE LOADS. */
+    #notifications {
+        display:none;
+        width:430px;
+        position:absolute;
+        top:50px;
+        left:5;
+        background:#FFF;
+        border:solid 1px rgba(100, 100, 100, .20);
+        -webkit-box-shadow:0 3px 8px rgba(0, 0, 0, .20);
+        z-index: 0;
+    }
+    /* AN ARROW LIKE STRUCTURE JUST OVER THE NOTIFICATIONS WINDOW */
+    #notifications:before {         
+        content: '';
+        display:block;
+        width:0;
+        height:0;
+        color:transparent;
+        border:10px solid #CCC;
+        border-color:transparent transparent #FFF;
+        margin-top:-20px;
+        margin-left:10px;
+    }
+        
+    h3 {
+        display:block;
+        color:#333; 
+        background:#FFF;
+        font-weight:bold;
+        font-size:13px;    
+        padding:8px;
+        margin:0;
+        border-bottom:solid 1px rgba(100, 100, 100, .30);
+    }
+        
+    .seeAll {
+        background:#F6F7F8;
+        padding:8px;
+        font-size:12px;
+        font-weight:bold;
+        border-top:solid 1px rgba(100, 100, 100, .30);
+        text-align:center;
+    }
+    .seeAll a {
+        color:#3b5998;
+    }
+    .seeAll a:hover {
+        background:#F6F7F8;
+        color:#3b5998;
+        text-decoration:underline;
+    }
+

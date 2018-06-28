@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+
+<html class="js no-touch">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="HandheldFriendly" content="True">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="description" content="Design Tamplate">
+<meta name="csrf-token">
+<meta name="author" content="Honglio">
+
+<title>Profile</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<!--<link rel="stylesheet" href="css/lib/bootstrap.min.css" type="text/css">-->
+
+<link rel="stylesheet" href="css/base.css" type="text/css">
+<link rel="stylesheet" href="css/style-green.css" type="text/css">
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<link rel="stylesheet" href="css/materialize.css" type="text/css">
+
+
+<!--
+<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="css/lib/material.css">
+<link rel="stylesheet" href="css/lib/font-awesome.min.css" type="text/css"> 
+<link rel="stylesheet" href="css/lib/ripples.css">
+-->
+<!-- Slider -->
+<link rel="stylesheet" href="rs-plugin/css/settings.css" type="text/css">
+<link rel="stylesheet" href="showbizpro/css/settings.css" type="text/css" media="screen">
+<!--[if lt IE 9]>
+<script src="js/vendors/html5shiv.js"></script>
+<![endif]-->
+<!--[if lt IE 10]>
+<script src="js/vendors/jquery.placeholder.js"></script>
+<![endif]-->
+<!-- JS -->
+<script type="text/javascript" src="js/vendors/modernizr.custom.js"></script>
+<script type="text/javascript" src="js/vendors/toucheffects.js"></script>
+<script type="text/javascript" src="js/vendors/jquery.js"></script>
+<script type="text/javascript" src="js/vendors/jquery-ui-1.10.3.custom.min.js"></script>
+<script type="text/javascript" src="js/vendors/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="js/vendors/bootstrap.js"></script>
+<script type="text/javascript" src="js/vendors/material.js"></script>
+<script type="text/javascript" src="js/vendors/ripples.js"></script>
+<script type="text/javascript" src="js/vendors/less-1.7.5.min.js"></script>
+
+<script src="js/skel.min.js">
+		{
+			prefix: 'css/style',
+			preloadStyleSheets: true,
+			resetCSS: true,
+			boxModel: 'border',
+			grid: { gutters: 30 },
+			breakpoints: {
+				wide: { range: '1200-', containers: 1140, grid: { gutters: 50 } },
+				narrow: { range: '481-1199', containers: 960 },
+				mobile: { range: '-480', containers: 'fluid', lockViewport: true, grid: { collapse: true } }
+			}
+		}
+</script>
+<style>
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+html {
+  overflow-y: scroll;
+}
+
+.form {
+  background: rgba(142,36,170,0.9);
+  padding: 40px;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+
+
+.group{ position: relative; margin-bottom: 2.4em;}
+label{
+color: #d2d2d2;
+font-size: 15px;
+font-weight: normal;
+position: absolute;
+pointer-events: none;
+top: 10px;
+transition: 0.2s ease all;
+}
+input{
+color: #FFFFFF;
+font-size: 15px;
+padding: 10px 0px 10px 0px;
+display: block;
+outline: none;
+border: none;
+width: 300px;
+border-bottom: 30px solid #d2d2d2;
+}
+.bar {
+position: relative; display: block; width: 300px;}
+.bar:before, .bar:after{
+content: "";
+height: 2px;
+width: 0;
+bottom: -1px;
+position: absolute;
+background: #B388FF;
+transition: 0.2s ease all;
+}
+.bar:before{left: 50%;}
+.bar:after{right: 50%;}
+input:valid { border-bottom: 1px solid #4fc24f;}
+input-valid ~ .bar:before,
+input-valid ~ .bar:after {
+background-color: #4fc24f !important;
+}
+input:focus ~ label,
+input.used ~ label {
+top: -20px;
+font-size: 15px;
+color: #B388FF;
+}
+input:valid ~ label,
+input:valid.used ~label {
+color: #4fc24f;
+}
+input:focus ~ .bar:before,
+input:focus ~ .bar:after{
+width: 50%;
+}
+.sansserif {
+    font-family: Arial, Helvetica, sans-serif;
+}
+p{
+color:white;
+}
+
+</style>
+
+</head>
+
+<body class="sansserif" style="background-color:#8E24AA;">
+        <div class="container">
+		<div class="navbar navbar-inverse navbar-fixed-top " style="padding-top:15px; padding-bottom:0px;" >
+			<a href="#" class="navbar-brand" style="font-size:22px; color:white; padding-left:80pt;">SUPPLIER PORTAL</a>
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+			<span class="icon-bar"></span>
+              		<span class="icon-bar"></span>
+              		<span class="icon-bar"></span>
+			</button>
+		 <div class="collapse navbar-collapse navHeaderCollapse">
+		   <ul class="nav navbar-nav navbar-left">
+			<li><a style="color:white; padding-left:50pt;" href="https://supplier-portal.herokuapp.com/dashboard?vendorid=<%= v_id%>&notdata[]=<%= notdata_rend%>&count=<%=count_rend%>" class="active" >Home</a></li>
+		 	<li  class="drop"><a style="color:white; background: rgb(142, 36, 170);" href="#" class="dropdown-toggle" data-toggle="dropdown" >Order</a>
+				<ul class="nav" >
+				   <li  style="background: rgb(142, 36, 170); font-size:15px;"><a href="https://supplier-portal.herokuapp.com/postatusview?po_status=Pending Acknowledge">Pending Acknowledge</a></li>
+				   <li  style="background: rgb(142, 36, 170); font-size:15px;"><a href="https://supplier-portal.herokuapp.com/postatusview?po_status=Acknowledged">Acknowledged</a></li>
+				   <li style="background: rgb(142, 36, 170);font-size:15px;"><a href="https://supplier-portal.herokuapp.com/postatusview?po_status=Pending Delivery">Pending Delivery</a></li>
+				   <li style="background: rgb(142, 36, 170);font-size:15px;"><a href="https://supplier-portal.herokuapp.com/postatusview?po_status=Pending Billing">Pending Bill</a></li>
+				   <li style="background: rgb(142, 36, 170);font-size:15px;"><a href="https://supplier-portal.herokuapp.com/postatusview?po_status=Fully Billed">Fully Billed</a></li>
+				   <li style="background: rgb(142, 36, 170);font-size:15px;"><a href="https://supplier-portal.herokuapp.com/postatusview?po_status=allorder">All Orders</a></li>
+				</ul>
+			</li>
+			<li class="drop"><a style="color:white; background: rgb(142, 36, 170);" href="#" class="dropdown-toggle" data-toggle="dropdown" >List</a>
+			   	<ul class="nav">
+				   <li style="background: rgb(142, 36, 170); font-size:15px;"><a href="https://supplier-portal.herokuapp.com/packingliststatusview?status=Ready to Ship">Packing List Ready To Ship</a></li>
+				   <li style="background: rgb(142, 36, 170);font-size:15px;"><a href="https://supplier-portal.herokuapp.com/packingliststatusview?status=Shipped">Packing List Shipped</a></li>
+				   <li style="background: rgb(142, 36, 170);font-size:15px;"><a href="https://supplier-portal.herokuapp.com/ItemReceipts">Item Receipt</a></li>
+				</ul>
+			</li>
+			<li class="drop"><a  style="color:white; background: rgb(142, 36, 170);" href="#" class="dropdown-toggle" data-toggle="dropdown" >Payables</a>
+			   	<ul class="nav">
+				   <li style="background: rgb(142, 36, 170);font-size:15px;"><a href="https://supplier-portal.herokuapp.com/billlistview">Bills</a></li>
+				   <li style="background: rgb(142, 36, 170);font-size:15px;"><a href="https://supplier-portal.herokuapp.com/billpayments">Bill Payment</a></li>
+			   	</ul>
+			</li>
+			<li class="drop"><a  style="color:white; background: rgb(142, 36, 170);" href="#" class="dropdown-toggle" data-toggle="dropdown" >My Account</a>
+			   	<ul class="nav">
+				   <li style="background: rgb(142, 36, 170);font-size:15px;"><a href="https://supplier-portal.herokuapp.com/profileview?vendorid=<%= v_id%>">View/Update Profile</a></li>
+				   <li style="background: rgb(142, 36, 170);font-size:15px;"><a href="https://supplier-portal.herokuapp.com/changepassword?vendorid=<%= v_id%>">Change Password</a></li>
+				   <li style="background: rgb(142, 36, 170);font-size:15px;"><a href="https://supplier-portal.herokuapp.com/signout">Sign Out</a></li>
+				</ul>
+			</li>
+			
+			
+			<li><img  src="img/cognizant-logo.png"/ style="height:30pt; padding-left:85pt;  "></li>
+		  </ul>
+		 </div>
+		</div>
+	</div>
+    
+    
+        <main>
+        	<div>
+        <ul>
+		<li data-transition="slotzoom-horizontal" data-slotamount="1" data-masterspeed="150">
+    <div data-x="center" data-hoffset="0" data-y="center" data-voffset="-50" data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:100;transformOrigin:50% 0%;" data-customout="x:0;y:0;z:400;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 50%;" data-speed="300" data-start="70" data-easing="Back.easeInOut" data-endeasing="Back.easeInOut" data-endspeed="600" style="z-index: 11;" class="tp-caption mediumlarge_light_white customin customout hidden-xs">Supplier Portal Features</div>
+							
+							
+		</li>
+		</ul>
+     </div>	
+                 <div class="row1"></div>
+	     <!--<div  class="transparent" style="overflow:scroll; background-color:white;  color:#0D47A1;">-->
+		 <div style="background-color:#e4e6e8;">
+	<br>
+  </div>			
+          <div class="container-fluid navbar-inverse modul-bt-one" align="left">
+		  <br>
+		    <h1 style="color:white;" align="center"><font size="12">Supplier Profile</font></h1>
+			   <div class="form">
+		  <form style="width:390pt; align:left; padding-right:0pt; padding-left:0pt;" id="contact" method="post">
+		 
+	                <div class="col offset-s7 s5" align="right">
+		
+         <a class="btn btn-primary btn-sm" align="right" href="https://supplier-portal.herokuapp.com/profileedit?vendorid=<%= v_id%>">Edit</a>
+                 </div>  
+	                       
+	                    
+	                        <% if(isperson=="Company"){ %>
+							<td colspan="5"><span style="font-weight:bold;">Name:</span> <%= company_name%></td>
+                    		<% } %>
+                    		<% if(isperson=="Individual"){ %>
+                    		<td colspan="5"><span style="font-weight:bold;">Name:</span> <%= name%></td>
+                    		<% } %>
+	                    </tr>
+					
+				<div class="group">
+				<p align="left" >Email</p>
+			    <input type="text" id="id_email" name="email" value="<%= email%>" pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="john@cts.com" required readonly>
+                <span class="bar"></span>
+				</div>
+				
+				<div class="group">
+					<p align="left">Address</p>
+			    <input type="text" id="id_address" name="address" value="<%= address%>" readonly>
+               <span class="bar"></span>
+				</div>
+				
+				<div class="group">
+				<p align="left" >Phone</p>
+			    <input type="text" id="id_phone" name="phone" value="<%= phone%>" pattern="[0-9+]{1}[0-9-\s]{2,}" title="+(country code)(contact number)" notrequired readonly>
+				 <span class="bar"></span>
+				</div>
+				
+				<div class="group">
+				<p align="left" >Alt. Phone</p>
+			    <input type="text" id="id_altphone" name="altphone" value="<%= altphone%>" pattern="[0-9+]{1}[0-9-\s]{2,}" title="+(country code)(contact number)" notrequired readonly>
+			    <span class="bar"></span>
+				</div>
+				
+				<div class="group">
+				 <p align="left" >Fax</p>
+			  <input type="text" id="id_fax" name="fax" value="<%= fax%>"  pattern="[0-9+]{1}[0-9-\s]{2,}" title="+(country code)(area code)(fax number)" notrequired readonly>
+		     <span class="bar"></span>
+				</div>
+				
+				<div class="group">
+				<p align="left">Shipment Origin</p>
+			    <input type="text" id="id_shipment_origin" name="shipmentorigin" value="<%= shipment_origin%>" readonly>
+               <span class="bar"></span>
+				</div>
+				
+				<div class="group">
+				<p align="left">Shipment Point</p>
+			    <input type="text" id="id_shipment_point" name="shipmentpoint" value="<%= shipment_point%>" readonly>
+               <span class="bar"></span>
+				</div>
+				
+	             <div class="group">
+			    <p align="left">Delivery Method</p>
+			    <input type="text" id="id_delivery_method" name="deliverymethod" value="<%= delivery_method%>" readonly>
+				<span class="bar"></span>
+				</div>
+				
+	            <div class="group">
+				<p align="left" >Delivery Lead Time</p>
+			<input  type="number" id="id_Delivery_Lead_Time" name="delivery_lead_time"  min="0" value="<%= delivery_lead_time%>" readonly>
+		      <span class="bar"></span>
+				</div>
+	                	
+	             <div class="group">
+				  <p align="left" >Ex-factory Lead Time</p>
+			 <input type="number" id="id_Ex_factory_Lead_Time"  name="exfactory_lead_time" value="<%= exfactory_lead_time%>" readonly>
+			    <span class="bar"></span>
+				</div>
+	             
+	            <div class="group">
+				<p align="left" >Terms</p>
+			 <input type="text" id="id_terms" name="terms" value="<%= terms%>" readonly>
+			 <span class="bar"></span>
+				</div>
+				
+				<div class="group">
+				<p align="left" >InCo Terms</p>
+			 <input type="text"  id="id_inco_terms" name="inco_terms" value="<%= incoterms%>" readonly>
+			 
+			    <span class="bar"></span>
+				</div>
+				
+				<div class="group">
+				<p align="left" >Currency</p>
+			 <input type="text"  id="id_currency" name="currency" value="<%= currency%>" readonly>
+			 
+			    <span class="bar"></span>
+				</div>
+				
+				<div class="group">
+				<p align="left" >Security Questions</p>
+			 <input type="text"  id="id_security_questions" name="securityquestions" value="<%= security_questions%>" readonly>
+			 <span class="bar"></span>
+				</div>
+				
+				<div class="group">
+				<p align="left" >Security Answer</p>
+			 <input type="text" id="id_security_answer" name="securityanswer" value="<%= security_answer%>" readonly>
+			 <span class="bar"></span>
+				</div>
+				
+	          
+	            
+		
+			<% if(isperson=="Company"){ %>
+			
+				<div class="group">
+				 <p align="left" >Contact Name</p>
+			 <input type="text"  id="id_contact_name" name="contact_name" value="<%= contact_name%>" readonly>
+			  <span class="bar"></span>
+				</div>
+	               	<div class="group">
+					<p align="left" >Contact Phone Number</p>
+			<input type="text"  id="id_contact_number" name="contact_number" value="<%= contact_phone%>" pattern="[0-9+]{1}[0-9-\s]{2,}" title="+(country code)(contact number)" readonly>
+			 
+			    <span class="bar"></span>
+				</div>
+	               <% } %>
+				   
+				   <div class="col offset-s7 s5" align="center">
+		
+         <a class="btn btn-primary btn-sm" align="right" href="https://supplier-portal.herokuapp.com/profileedit?vendorid=<%= v_id%>">Edit</a>
+                 </div>  
+		  </form>
+		  </div>
+	      </div>  
+	</main>
+`	
+	<footer>
+		<section id="footer" style="color:white;">
+			<div class="container-fluid navbar-fixed-bottom  navbar-inverse modul-bt-one" align="center">
+				<h1 style="color:white;"></h1>
+				<p style="color:white; font-size: 8pt; text-align:right;"><span style="float:left;"><a style="font-size: 8pt;" href="http://www.cognizant.com">www.Cognizant.com</a></span> &copy; Cognizant Technology Solutions &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+			</div>
+		</section>
+	</footer>
+<script>
+$(document).ready(function(){
+ $(window).resize(function(){
+ if(($(window).width())<767)
+{  
+  $("ul.nav li").removeClass("drop");
+  $("ul.nav li").addClass("dropdown");
+  $("ul.nav li.dropdown ul").removeClass("nav");
+  $("ul.nav li.dropdown ul").addClass("dropdown-menu");
+}
+else{ 
+  $("ul.nav li").removeClass("dropdown");
+  $("ul.nav li").addClass("drop");
+  $("ul.nav li.drop ul").removeClass("dropdown-menu");
+  $("ul.nav li.drop ul").addClass("nav");
+}
+});
+$('input').blur(function(){
+if($(this).val())
+$(this).addClass('used');
+else
+$(this).removeClass('used');
+});
+   $('#noti_Counter')
+            .css({ opacity: 0 })
+            .text(<%= count_rend%>)              // ADD DYNAMIC VALUE (YOU CAN EXTRACT DATA FROM DATABASE OR XML).
+            .css({ top: '-10px' })
+            .animate({ top: '-2px', opacity: 1 }, 500);
+        $('#noti_Button').click(function () {
+            // TOGGLE (SHOW OR HIDE) NOTIFICATION WINDOW.
+            $('#notifications').fadeToggle('fast', 'linear', function () {
+                if ($('#notifications').is(':hidden')) {
+                    $('#noti_Button').css('background-color', '#2E467C');
+                }
+                else $('#noti_Button').css('background-color', '#FFF');        // CHANGE BACKGROUND COLOR OF THE BUTTON.
+            });
+            $('#noti_Counter').fadeOut('slow');                 // HIDE THE COUNTER.
+            return false;
+        });
+        // HIDE NOTIFICATIONS WHEN CLICKED ANYWHERE ON THE PAGE.
+        $(document).click(function () {
+            $('#notifications').hide();
+            // CHECK IF NOTIFICATION COUNTER IS HIDDEN.
+            if ($('#noti_Counter').is(':hidden')) {
+                // CHANGE BACKGROUND COLOR OF THE BUTTON.
+                $('#noti_Button').css('background-color', '#2E467C');
+            }
+        });
+        $('#notifications').click(function () {
+            return false;       // DO NOTHING WHEN CONTAINER IS CLICKED.
+        });
+});
+$("#myBtn").click(function(){
+        $("#myModal").modal();
+    });
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="js/vendors/jquery.slimscroll.min.js"></script><script type="text/javascript" src="js/vendors/jquery.scrollUp.js"></script><script type="text/javascript" src="js/vendors/jquery.stickup.min.js"></script><script type="text/javascript" src="js/application.js"></script><script type="text/javascript">//enabling stickUp on the '.navbar-wrapper' class
+$(function() {
+  $('#top-nav').stickUp({
+    parts: {
+      0: 'wrapper',
+      1: 'service1',
+      2: 'advert1',
+      3: 'portfolio',
+      4: 'advert2',
+      5: 'wrapper2',
+      6: 'advert3',
+      7: 'price',
+      8: 'advert4',
+      9: 'client',
+      10: 'advert5'
+    },
+    itemClass: 'menuItem',
+    itemHover: 'active',
+    topMargin: 'auto'
+  });
+});
+// In mobile browser, navbar collapse when click on 'a'.
+$('.navbar.navbar-inverse.navbar-static-top a').click(function() {
+  $('.navbar-collapse').addClass('hideClass');
+});
+$('.navbar.navbar-inverse.navbar-static-top a').click(function() {
+  $('.navbar-collapse').addClass('collapse');
+});
+$('.navbar.navbar-inverse.navbar-static-top a').click(function() {
+  $('.navbar-collapse').removeClass('in');
+});
+$('.navbar-toggle').click(function() {
+  $('.navbar-collapse').removeClass('hideClass');
+});
+// Smoth page scroll
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top - 45
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});</script><script type="text/javascript" src="js/vendors/jquery.mixitup.js"></script><script type="text/javascript" src="rs-plugin/js/jquery.themepunch.plugins.min.js"></script><script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script><script type="text/javascript" src="showbizpro/js/jquery.themepunch.showbizpro.min.js"></script><script type="text/javascript">jQuery(document).ready(function() {
+  //- Slider Options
+  jQuery('.tp-banner').revolution({
+    delay: 90000,
+    startwidth: 1170,
+    startheight: 500,
+    hideThumbs: 10,
+    fullScreen: "on",
+    fullScreenAlignForce: "on",
+    fullScreenOffsetContainer: ".navigation-menu"
+  });
+  jQuery('.tp-banner-two').revolution({
+    delay: 9000000,
+    startwidth: 1200,
+    startheight: 356,
+    hideThumbs: 200,
+    thumbWidth: 100,
+    thumbHeight: 50,
+    thumbAmount: 3,
+    navigationType: "none", // use none, bullet or thumb
+    soloArrowLeftHalign: "left", // left,center,right
+    soloArrowLeftValign: "center", // top,center,bottom
+    soloArrowLeftHOffset: 0, // offset position from aligned position
+    soloArrowLeftVOffset: 0, // offset position from aligned position
+    soloArrowRightHalign: "right", // left,center,right
+    soloArrowRightValign: "center", // top,center,bottom
+    soloArrowRightHOffset: 0, // offset position from aligned position
+    soloArrowRightVOffset: 0, // offset position from aligned position
+    touchenabled: "on",
+    onHoverStop: "on"
+  }); //ready
+  //- Portfolio Filter
+  jQuery('#Grid').mixitup();
+  //- Carusel Slider
+  jQuery('#example6').showbizpro({
+    dragAndScroll: "off",
+    visibleElementsArray: [4, 4, 1, 1],
+    carousel: "on",
+    entrySizeOffset: 0,
+    allEntryAtOnce: "off",
+    rewindFromEnd: "off",
+    autoPlay: "off",
+    delay: 2000,
+    speed: 500
+  });
+  jQuery('#example7').showbizpro({
+    dragAndScroll: "off",
+    visibleElementsArray: [2, 2, 1, 1],
+    carousel: "on",
+    entrySizeOffset: 0,
+    allEntryAtOnce: "off",
+    rewindFromEnd: "off",
+    autoPlay: "off",
+    delay: 2000,
+    speed: 500
+  });
+});
+$('ul.nav li.dropdown').hover(function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(500);
+}, function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeOut(500);
+}); 
+$('ul.nav li.dropdown ul.dropdown-menu li ').hover(function(){
+$(this).css("background-color", "white");
+}, function(){
+$(this).css("background-color", "rgb(185, 69, 216)");
+    });
+</script></body>
+</html>

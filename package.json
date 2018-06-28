@@ -1,0 +1,32 @@
+{
+  "name": "supplier-portal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Nishant Goyal",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.6.1",
+    "client-sessions": "^0.8.0",
+    "crypto-js": "^3.1.9-1",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "formidable": "^1.2.1",
+    "generic-pool": "^3.4.2",
+    "global-tunnel": "^1.2.0",
+    "http": "0.0.0",
+    "https": "^1.0.0",
+    "lodash": "^4.17.10",
+    "netsuite-search": "^0.1.0",
+    "oauth-1.0a": "^2.2.4",
+    "path": "^0.12.7",
+    "pg": "^7.4.3",
+    "settings": "^0.1.1",
+    "sql.js": "^0.5.0",
+    "unirest": "^0.5.1"
+  }
+}

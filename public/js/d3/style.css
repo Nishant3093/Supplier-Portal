@@ -1,0 +1,154 @@
+@charset "utf-8";
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: normal;
+	line-height: 18px;
+	font-weight: normal;
+	color: #797a79;
+	margin: 0px;
+	padding: 0px;
+	background-color: #cad1d6;
+}
+#outerdiv {
+	float: left;
+	height: auto;
+	width: 100%;
+}
+.topborder {
+	background-color: #cad1d6;
+	float: left;
+	height: 6px;
+	width: 100%;
+}
+#headerdiv {
+	float: left;
+	height: 79px;
+	width: 100%;
+	background-color: #FFF;
+	border-top-width: 3px;
+	border-top-style: solid;
+	border-top-color: #adb8c0;
+	border-bottom-width: 10px;
+	border-bottom-style: solid;
+	border-bottom-color: #adb8c0;
+}
+#headerinner {
+	height: auto;
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#headercontent {
+	float: left;
+	height: auto;
+	width: 100%;
+}
+.logo {
+	float: left;
+	height: auto;
+	width: 205px;
+}
+.titleheadertext {
+	float: left;
+	height: auto;
+	width: 400px;
+	font-size: 22px;
+	color: #77ba03;
+	padding-bottom: 13px;
+	padding-left: 30px;
+	padding-top: 45px;
+}
+.cognizantlogo {
+	float: right;
+	height: auto;
+	width: 200px;
+	text-align: right;
+	padding-top: 12px;
+}
+#contentdiv {
+	background-color: #EEEEEE;
+	height: auto;
+	width: 100%;
+	float: left;
+}
+#contentitem {
+	//float: left;
+	height: auto;
+	width: 100%;
+}
+.colorchart {
+	background-color: #FFF;
+	float: left;
+	height: auto;
+	width: 135px;
+	margin-left: 68px;
+	border: 1px solid #CCC;
+	box-shadow: 6px 6px 0px 0px #bebebe;
+	margin-bottom: 35px;
+}
+.colorchart h2 {
+	text-align: center;
+	color: #333;
+	font-size: 18px;
+}
+.contenttextdiv {
+	float: left;
+	height: auto;
+	width: 455px;
+	font-size: 10px;
+}
+.contenttextdiv ul {
+}
+.contenttextdiv ul li {
+	padding-top: 2px;
+}
+.zoomdiv {
+	float: right;
+	height: auto;
+	width: 270px;
+	padding-top: 14px;
+}
+.zoomin {
+background-image: url('https://system.na1.netsuite.com/c.TSTDRV1174726/suitebundle37771/Document Flow/img/zoomin.gif');
+	
+	padding: 20px;
+	width: 125px;
+	border: none;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+.zoomout {
+background-image: url('https://system.na1.netsuite.com/c.TSTDRV1174726/suitebundle37771/Document Flow/img/zoomout.gif');
+	
+	padding: 20px;
+	width: 125px;
+	border: none;
+	background-repeat: no-repeat;
+	margin-left: 10px;
+	cursor: pointer;
+}
+#footerdiv {
+	float: left;
+	height: auto;
+	width: 100%;
+}
+#footercontent {
+	float: left;
+	height: auto;
+	width: 100%;
+        background-image: url('https://system.na1.netsuite.com/c.TSTDRV1174726/suitebundle37771/Document Flow/img/footer.png');
+	background-repeat: no-repeat;
+	background-position: 52px 0px;
+	margin-top: 40px;
+}
+
+
+#footercontent p {
+	color: #7b7b7b;
+	font-size: 10px;
+	text-align: center;
+	padding-top: 10px;
+}
+
+
